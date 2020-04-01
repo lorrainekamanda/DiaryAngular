@@ -1,0 +1,31 @@
+<div class="container-fluid">
+
+<div>
+
+<h1>  MY DIARY</h1>
+<hr>
+
+<h3> My Diary is an app that allows you to fill in your
+    name,date and keep track of your appointments and what
+    you hope to accomplish during that day </h3> 
+<div  class = row>
+    <div class = "col-lg-6">
+<div *ngFor = "let diary of diaries; let i = index"> 
+<p > 
+   Name: {{diary.name}} ,      Date:{{diary.date|date}}
+</p>
+<app-input (finish) = 'completeGoal($event,i)'[diary] = 'diary'></app-input>
+</div>
+</div>
+<div class="col-lg-6">
+<app-displayer  (addDiary)="addNewGoal($event)" ></app-displayer>
+</div>
+</div>
+</div>
+
+
+    
+
+
+
+
