@@ -1,0 +1,36 @@
+<div class="container-fluid">
+
+
+ 
+ <div class="row">
+ 
+
+<div class="col-lg-6">
+
+ <h3 style="width: 200px;margin-left: 90px;">NEW GOALS</h3>
+<hr>
+ <div >
+  <form  (ngSubmit)='submitGoal()' #goalForm='ngForm'>
+ 
+
+</form>
+
+
+
+
+<div class="col-lg-6">
+  
+<label for="name"style="width: 200px;margin-left: 90px;" > Name:</label><br>
+<input type="text" [(ngModel)] = "newDiary.name" name ="name" style="width: 200px;margin-left: 90px;"><br><br style="width: 200px;margin-left: 90px;">
+<label for="date"style="width: 200px;margin-left: 90px;" >Date:</label>
+<input type="date" [(ngModel)] = "newDiary.date" date = "date" style="width: 200px;margin-left: 90px;"><br><br>
+
+<label for=""style="width: 200px;margin-left: 90px;" >Description</label>
+<textarea [(ngModel)] ="newDiary.done" done = "done" id="" cols="35" rows="10" style="margin-left:70px ;"></textarea ><br>
+
+    <button type="submit" class="btn btn-success"style="width: 200px;margin-left: 90px;" (click) = "submitGoal()">Add Goal</button>
+
+</div>
+
+</div> 
+</div>
