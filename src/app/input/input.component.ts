@@ -1,5 +1,7 @@
+import { Addition } from './../addition';
 import { Component, OnInit,Output,EventEmitter,Input } from '@angular/core';
 import{ Diary} from '../diary'
+
 
 @Component({
   selector: 'app-input',
@@ -15,6 +17,19 @@ export class InputComponent implements OnInit {
   deleteGoal(complete:boolean){
     this.finish.emit(complete)
   }
+  add:Addition;
+   @Output() clap = new EventEmitter <number>()
+     
+   
+  //  countUp(add:number){
+  //      let count = 0
+  //       let add2 = count +1
+  //      this.clap.emit(add2)
+  //    }
+   
+
+
+    
 
 constructor() { }
  

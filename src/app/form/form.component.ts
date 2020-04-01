@@ -7,9 +7,7 @@ import{Diary} from '../diary'
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  // toggling(){
-  //   this.newDiary.showGoals = !this.newDiary.showGoals
-  // }
+
   addNewGoal(goal){
     this.diaries.push(goal)
   }
@@ -20,6 +18,12 @@ export class FormComponent implements OnInit {
        this.diaries.splice(index,1)
      }
   }
+
+//  addNumbers(){
+ 
+//     let count = 0
+//    count+1
+//   }
 
   newDiary = new Diary("",new Date(),"")
   diaries:Diary[] = [
